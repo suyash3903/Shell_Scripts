@@ -1,0 +1,69 @@
+In *shell scripting, an **array* is a data structure that allows you to store *multiple values* in a single variable. Arrays are particularly useful for managing lists of data such as filenames, user names, or a list of numbers.
+
+### ❖ Array Basics in Shell Script (Bash)
+
+* Arrays in Bash are *indexed* starting from 0.
+* You can create arrays and access their elements using specific syntax.
+
+### ❖ Declaring an Array
+
+bash
+fruits=("apple" "banana" "cherry")
+
+
+### ❖ Accessing Elements
+
+bash
+echo ${fruits[0]}   # Output: apple
+echo ${fruits[1]}   # Output: banana
+
+
+### ❖ Adding or Updating Elements
+
+bash
+fruits[3]="orange"
+
+
+### ❖ Getting All Elements
+
+bash
+echo ${fruits[@]}   # Output: apple banana cherry orange
+
+
+### ❖ Getting Length of Array
+
+bash
+echo ${#fruits[@]}  # Output: 4
+
+
+---
+
+### ✅ Example Shell Script Using Array
+
+bash
+#!/bin/bash
+
+# Declare an array
+colors=("red" "green" "blue")
+
+# Add a new element
+colors[3]="yellow"
+
+# Print all colors
+echo "All colors: ${colors[@]}"
+
+# Print number of elements
+echo "Number of colors: ${#colors[@]}"
+
+# Print individual elements
+echo "First color: ${colors[0]}"
+echo "Second color: ${colors[1]}"
+
+
+### 💡 Output:
+
+
+All colors: red green blue yellow
+Number of colors: 4
+First color: red
+Second color: green
